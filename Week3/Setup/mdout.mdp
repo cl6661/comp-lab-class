@@ -2,7 +2,7 @@
 ;	File 'mdout.mdp' was generated
 ;	By user: unknown (3885259)
 ;	On host: cs008.hpc.nyu.edu
-;	At date: Tue Oct  4 15:14:18 2022
+;	At date: Tue Oct  4 15:20:50 2022
 ;
 ;	Created by:
 ;	                     :-) GROMACS - gmx grompp, 2020.4 (-:
@@ -11,7 +11,7 @@
 ;	Data prefix:  /share/apps/gromacs/2020.4/openmpi/intel
 ;	Working dir:  /scratch/work/courses/CHEM-GA-2671-2022fa/cl6661/comp-lab-class/Week3/Setup
 ;	Command line:
-;	  gmx_mpi grompp -f ions.mdp -c 1AKI_solv.gro -p topol.top -o ions.tpr
+;	  gmx_mpi grompp -f minim.mdp -c 1AKI_solv_ions.gro -p topol.top -o em.tpr
 
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.
@@ -93,7 +93,7 @@ rlist                    = 1
 
 ; OPTIONS FOR ELECTROSTATICS AND VDW
 ; Method for doing electrostatics
-coulombtype              = cutoff
+coulombtype              = PME
 coulomb-modifier         = Potential-shift-Verlet
 rcoulomb-switch          = 0
 rcoulomb                 = 1.0
