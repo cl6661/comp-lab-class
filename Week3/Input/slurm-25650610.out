@@ -1,0 +1,101 @@
+                      :-) GROMACS - gmx mdrun, 2020.4 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf      Artem Zhmurov   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2019, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2020.4
+Executable:   /share/apps/gromacs/2020.4/openmpi/intel/bin/gmx_mpi
+Data prefix:  /share/apps/gromacs/2020.4/openmpi/intel
+Working dir:  /home/cl6661/ondemand/data/sys/myjobs/projects/default/1
+Command line:
+  gmx_mpi mdrun -deffnm md_0_1
+
+
+Back Off! I just backed up md_0_1.log to ./#md_0_1.log.1#
+Reading file md_0_1.tpr, VERSION 2020.4 (single precision)
+Changing nstlist from 10 to 50, rlist from 1 to 1.116
+
+Using 48 MPI processes
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Back Off! I just backed up md_0_1.xtc to ./#md_0_1.xtc.1#
+
+Back Off! I just backed up md_0_1.edr to ./#md_0_1.edr.1#
+starting mdrun 'LYSOZYME in water'
+500000 steps,   1000.0 ps.
+
+-------------------------------------------------------
+Program:     gmx mdrun, version 2020.4
+Source file: src/gromacs/ewald/pme_redistribute.cpp (line 305)
+MPI rank:    15 (out of 48)
+
+Fatal error:
+29 particles communicated to PME rank 3 are more than 2/3 times the cut-off
+out of the domain decomposition cell of their charge group in dimension x.
+This usually means that your system is not well equilibrated.
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at http://www.gromacs.org/Documentation/Errors
+-------------------------------------------------------
+
+-------------------------------------------------------
+Program:     gmx mdrun, version 2020.4
+Source file: src/gromacs/ewald/pme_redistribute.cpp (line 305)
+MPI rank:    19 (out of 48)
+
+Fatal error:
+26 particles communicated to PME rank 4 are more than 2/3 times the cut-off
+out of the domain decomposition cell of their charge group in dimension x.
+This usually means that your system is not well equilibrated.
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at http://www.gromacs.org/Documentation/Errors
+-------------------------------------------------------
+
+-------------------------------------------------------
+Program:     gmx mdrun, version 2020.4
+Source file: src/gromacs/ewald/pme_redistribute.cpp (line 305)
+MPI rank:    23 (out of 48)
+
+Fatal error:
+25 particles communicated to PME rank 5 are more than 2/3 times the cut-off
+out of the domain decomposition cell of their charge group in dimension x.
+This usually means that your system is not well equilibrated.
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at http://www.gromacs.org/Documentation/Errors
+-------------------------------------------------------
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 15 in communicator MPI_COMM_WORLD
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+[cs429.hpc.nyu.edu:31036] 2 more processes have sent help message help-mpi-api.txt / mpi-abort
+[cs429.hpc.nyu.edu:31036] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
