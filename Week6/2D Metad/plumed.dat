@@ -1,0 +1,38 @@
+# vim:ft=plumed
+# MOLINFO STRUCTURE=diala.pdb 
+# you might want to use MOLINFO shortcuts
+
+# metad: __FILL__ ARG=__FILL__ 
+   # Deposit a Gaussian every 500 time steps, with initial height equal to 1.2 kJ/mol 
+   #PACE=500 HEIGHT=1.2 
+   # the bias factor should be wisely chosen 
+   #BIASFACTOR=__FILL__ 
+   # Gaussian width (sigma) should be chosen based on CV fluctuation in unbiased run 
+   #SIGMA=__FILL__ 
+   # Gaussians will be written to file and also stored on grid 
+   #FILE=HILLS GRID_MIN=-pi GRID_MAX=pi 
+
+# Compute the backbone dihedral angle phi, defined by atoms C-N-CA-C
+phi: TORSION ATOMS=5,7,9,15 
+# Compute the backbone dihedral angle psi, defined by atoms N-CA-C-N
+psi: TORSION ATOMS=7,9,15,17
+# Activate well-tempered metadynamics in phi
+
+METAD ...
+  LABEL=metad
+  ARG=phi,psi
+  FILE=HILLS_A
+  PACE=500
+  HEIGHT=1.2
+  SIGMA=0.5,1
+  BIASFACTOR=10.0
+  GRID_MIN=-pi,-pi
+  GRID_MAX=pi,pi
+  GRID_WFILE=topolA.grid.dat
+  GRID_WSTRIDE=10000
+... METAD
+
+
+# Print both collective variables and the value of the bias potential on COLVAR file
+PRINT ARG=* FILE=COLVAR_A STRIDE=10 
+
