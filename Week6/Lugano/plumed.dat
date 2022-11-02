@@ -34,5 +34,5 @@ METAD ...
 
 
 # Print both collective variables and the value of the bias potential on COLVAR file
-PRINT ARG=* FILE=COLVAR_A STRIDE=10 
+PRINT ARG=* FILE=diala_metad_biasfactor10_pace500_height1.2_sigma0.55_10nsCOLVAR_A STRIDE=10 
 
