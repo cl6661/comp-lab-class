@@ -21,18 +21,18 @@ psi: TORSION ATOMS=7,9,15,17
 METAD ...
   LABEL=metad
   ARG=phi,psi
-  FILE=HILLS_A
+  FILE=dialaA_2dmetad_biasfactor10_pace500_height1.2_sigma0.55_1.1_10ns_HILLS
   PACE=500
   HEIGHT=1.2
-  SIGMA=0.5,1
+  SIGMA=0.55,1.1
   BIASFACTOR=10.0
   GRID_MIN=-pi,-pi
   GRID_MAX=pi,pi
-  GRID_WFILE=topolA.grid.dat
+  GRID_WFILE=dialaA_2dmetad_biasfactor10_pace500_height1.2_sigma0.55_1.1_10ns.grid.dat
   GRID_WSTRIDE=10000
 ... METAD
 
 
 # Print both collective variables and the value of the bias potential on COLVAR file
-PRINT ARG=* FILE=COLVAR_A STRIDE=10 
+PRINT ARG=* FILE=dialaA_2dmetad_biasfactor10_pace500_height1.2_sigma0.55_1.1_10ns_COLVAR STRIDE=10 
 
