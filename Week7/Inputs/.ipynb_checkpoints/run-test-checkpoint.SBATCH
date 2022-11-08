@@ -7,7 +7,7 @@
 #SBATCH --time=12:00:00
 #SBATCH --mem=90GB
 #SBATCH --job-name=alphaFold
-
+#SBATCH --export=NONE
 /scratch/work/public/apps/alphafold/2.2.0/run-alphafold-2.2.0.py \
   --fasta_paths=$(pwd)/rcsb_pdb_1UBQ.fasta \
   --max_template_date=2022-10-25 \

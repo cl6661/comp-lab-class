@@ -1,0 +1,64 @@
+I1108 10:38:40.067804 22646807313280 run-alphafold-2.2.0.py:116] Mounting /scratch/work/courses/CHEM-GA-2671-2022fa/cl6661/comp-lab-class/Week7/Inputs -> /tmp/cl6661/beadf26370214faebca275e39c0485ba/fasta_path_0
+Command to run: MY_ALPHAFOLD_BINDS="--bind /scratch/work/courses/CHEM-GA-2671-2022fa/cl6661/comp-lab-class/Week7/Inputs:/tmp/cl6661/beadf26370214faebca275e39c0485ba/fasta_path_0:ro" /bin/bash /scratch/work/public/apps/alphafold/2.2.0/run-alphafold-2.2.0.bash python -u /opt/alphafold/run_alphafold.py --fasta_paths=/tmp/cl6661/beadf26370214faebca275e39c0485ba/fasta_path_0/rcsb_pdb_1UBQ.fasta --uniref90_database_path=/alphafold-data/uniref90/uniref90.fasta --mgnify_database_path=/alphafold-data/mgnify/mgy_clusters_2018_12.fa --data_dir=/alphafold-data --template_mmcif_dir=/alphafold-data/pdb_mmcif/mmcif_files --obsolete_pdbs_path=/alphafold-data/pdb_mmcif/obsolete.dat --pdb70_database_path=/alphafold-data/pdb70/pdb70 --uniclust30_database_path=/alphafold-data/uniclust30/uniclust30_2018_08/uniclust30_2018_08 --bfd_database_path=/alphafold-data/bfd/bfd_metaclust_clu_complete_id30_c90_final_seq.sorted_opt --output_dir=/scratch/work/courses/CHEM-GA-2671-2022fa/cl6661/comp-lab-class/Week7/Inputs --max_template_date=2022-10-25 --db_preset=full_dbs --model_preset=monomer --benchmark=False --use_precomputed_msas=False --num_multimer_predictions_per_model=5 --run_relax=True --use_gpu_relax=True --logtostderr
+I1108 10:38:52.450264 22690355414208 templates.py:857] Using precomputed obsolete pdbs /alphafold-data/pdb_mmcif/obsolete.dat.
+I1108 10:38:53.139469 22690355414208 xla_bridge.py:252] Unable to initialize backend 'tpu_driver': NOT_FOUND: Unable to find driver in registry given worker: 
+I1108 10:38:53.349477 22690355414208 xla_bridge.py:252] Unable to initialize backend 'tpu': INVALID_ARGUMENT: TpuPlatform is not available.
+I1108 10:39:00.577150 22690355414208 run_alphafold.py:376] Have 5 models: ['model_1_pred_0', 'model_2_pred_0', 'model_3_pred_0', 'model_4_pred_0', 'model_5_pred_0']
+I1108 10:39:00.577349 22690355414208 run_alphafold.py:393] Using random seed 892890262368641275 for the data pipeline
+I1108 10:39:00.577526 22690355414208 run_alphafold.py:161] Predicting rcsb_pdb_1UBQ
+I1108 10:39:00.579608 22690355414208 jackhmmer.py:133] Launching subprocess "/usr/bin/jackhmmer -o /dev/null -A /state/partition1/job-26810253/tmpkyd1ms2j/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --incE 0.0001 -E 0.0001 --cpu 8 -N 1 /tmp/cl6661/beadf26370214faebca275e39c0485ba/fasta_path_0/rcsb_pdb_1UBQ.fasta /alphafold-data/uniref90/uniref90.fasta"
+I1108 10:39:00.823933 22690355414208 utils.py:36] Started Jackhmmer (uniref90.fasta) query
+I1108 10:49:20.313562 22690355414208 utils.py:40] Finished Jackhmmer (uniref90.fasta) query in 619.489 seconds
+I1108 10:49:20.516244 22690355414208 jackhmmer.py:133] Launching subprocess "/usr/bin/jackhmmer -o /dev/null -A /state/partition1/job-26810253/tmpktpqqxg8/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --incE 0.0001 -E 0.0001 --cpu 8 -N 1 /tmp/cl6661/beadf26370214faebca275e39c0485ba/fasta_path_0/rcsb_pdb_1UBQ.fasta /alphafold-data/mgnify/mgy_clusters_2018_12.fa"
+I1108 10:49:20.671932 22690355414208 utils.py:36] Started Jackhmmer (mgy_clusters_2018_12.fa) query
+I1108 10:54:30.510861 22690355414208 utils.py:40] Finished Jackhmmer (mgy_clusters_2018_12.fa) query in 309.839 seconds
+I1108 10:54:30.861790 22690355414208 hhsearch.py:85] Launching subprocess "/usr/bin/hhsearch -i /state/partition1/job-26810253/tmpvg9timwm/query.a3m -o /state/partition1/job-26810253/tmpvg9timwm/output.hhr -maxseq 1000000 -d /alphafold-data/pdb70/pdb70"
+I1108 10:54:31.089634 22690355414208 utils.py:36] Started HHsearch query
+I1108 10:54:57.500669 22690355414208 utils.py:40] Finished HHsearch query in 26.411 seconds
+I1108 10:54:57.983625 22690355414208 hhblits.py:128] Launching subprocess "/usr/bin/hhblits -i /tmp/cl6661/beadf26370214faebca275e39c0485ba/fasta_path_0/rcsb_pdb_1UBQ.fasta -cpu 4 -oa3m /state/partition1/job-26810253/tmp036fu55d/output.a3m -o /dev/null -n 3 -e 0.001 -maxseq 1000000 -realign_max 100000 -maxfilt 100000 -min_prefilter_hits 1000 -d /alphafold-data/bfd/bfd_metaclust_clu_complete_id30_c90_final_seq.sorted_opt -d /alphafold-data/uniclust30/uniclust30_2018_08/uniclust30_2018_08"
+I1108 10:54:58.154226 22690355414208 utils.py:36] Started HHblits query
+I1108 10:57:24.200514 22690355414208 utils.py:40] Finished HHblits query in 146.046 seconds
+I1108 10:57:24.241343 22690355414208 templates.py:878] Searching for template for: MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG
+I1108 10:57:27.259419 22690355414208 templates.py:267] Found an exact template match 5xxu_f.
+I1108 10:57:27.261785 22690355414208 templates.py:912] Skipped invalid hit 5XXU_f uS2, eS1, uS5, uS3, eS4; Toxoplasma gondii ribosome, rRNA, rprotein; 3.35A {Toxoplasma gondii}, error: None, warning: 5xxu_f (sum_probs: 68.4, rank: 1): feature extracting errors: Template all atom mask was all zeros: 5xxu_f. Residue range: 0-75, mmCIF parsing errors: {}
+I1108 10:57:27.762204 22690355414208 templates.py:267] Found an exact template match 5jne_E.
+I1108 10:57:27.774170 22690355414208 templates.py:267] Found an exact template match 5jne_A.
+I1108 10:57:28.787294 22690355414208 templates.py:267] Found an exact template match 2al3_A.
+I1108 10:57:37.920849 22690355414208 templates.py:267] Found an exact template match 6snt_f.
+I1108 10:57:37.924277 22690355414208 templates.py:912] Skipped invalid hit 6SNT_f 40S ribosomal protein S0-A, 40S; 80S, stalling, SDD1, TRANSLATION; HET: MG; 2.8A {Saccharomyces cerevisiae}, error: None, warning: 6snt_f (sum_probs: 66.7, rank: 13): feature extracting errors: Template all atom mask was all zeros: 6snt_f. Residue range: 0-75, mmCIF parsing errors: {}
+I1108 10:57:38.124435 22690355414208 templates.py:267] Found an exact template match 6pth_A.
+I1108 10:57:38.321797 22690355414208 templates.py:267] Found an exact template match 3v7o_B.
+I1108 10:57:46.278361 22690355414208 templates.py:267] Found an exact template match 6rm3_SFF.
+I1108 10:57:46.281041 22690355414208 templates.py:912] Skipped invalid hit 6RM3_SFF uL2, uS2, uL15, eS26, uL3; Microsporidia, Ribosome, Intracellular Parasite; HET: MG; 3.4A {Vairimorpha necatrix}, error: None, warning: 6rm3_SFF (sum_probs: 66.1, rank: 5): feature extracting errors: Template all atom mask was all zeros: 6rm3_SFF. Residue range: 0-75, mmCIF parsing errors: {}
+I1108 10:57:46.387988 22690355414208 templates.py:267] Found an exact template match 5yca_A.
+I1108 10:57:46.607610 22690355414208 templates.py:267] Found an exact template match 6ote_A.
+I1108 10:57:46.621324 22690355414208 templates.py:912] Skipped invalid hit 6OTE_A Seryl-tRNA synthetase, cytoplasmic; SSGCID, tRNA binding, ATP binding; HET: SSA; 2.95A {Cryptosporidium parvum (strain Iowa II)}, error: None, warning: 6ote_A (sum_probs: 66.1, rank: 241): feature extracting errors: Template all atom mask was all zeros: 6ote_A. Residue range: 33-106, mmCIF parsing errors: {}
+I1108 10:58:07.373741 22690355414208 templates.py:267] Found an exact template match 4v88_Af.
+I1108 10:58:07.377182 22690355414208 templates.py:912] Skipped invalid hit 4V88_Af Ribosome; Translation, ribosome, 40S, 60S, 80S; HET: MG, OHX, ZN; 3.0A {Saccharomyces cerevisiae}, error: None, warning: 4v88_Af (sum_probs: 66.0, rank: 40): feature extracting errors: Template all atom mask was all zeros: 4v88_Af. Residue range: 0-75, mmCIF parsing errors: {}
+I1108 10:58:09.077700 22690355414208 templates.py:267] Found an exact template match 6ef3_u.
+I1108 10:58:09.337346 22690355414208 templates.py:267] Found an exact template match 6p81_A.
+I1108 10:58:09.352749 22690355414208 templates.py:267] Found an exact template match 4v88_Bm.
+I1108 10:58:09.355643 22690355414208 templates.py:912] Skipped invalid hit 4V88_Bm Ribosome; Translation, ribosome, 40S, 60S, 80S; HET: MG, OHX, ZN; 3.0A {Saccharomyces cerevisiae}, error: None, warning: 4v88_Bm (sum_probs: 65.6, rank: 9): feature extracting errors: Template all atom mask was all zeros: 4v88_Bm. Residue range: 0-75, mmCIF parsing errors: {}
+I1108 10:58:09.355818 22690355414208 templates.py:267] Found an exact template match 6snt_ad.
+I1108 10:58:09.358526 22690355414208 templates.py:912] Skipped invalid hit 6SNT_ad 40S ribosomal protein S0-A, 40S; 80S, stalling, SDD1, TRANSLATION; HET: MG; 2.8A {Saccharomyces cerevisiae}, error: None, warning: 6snt_ad (sum_probs: 65.6, rank: 10): feature extracting errors: Template all atom mask was all zeros: 6snt_ad. Residue range: 0-75, mmCIF parsing errors: {}
+I1108 10:58:09.358698 22690355414208 templates.py:267] Found an exact template match 4v88_Cf.
+I1108 10:58:09.362069 22690355414208 templates.py:912] Skipped invalid hit 4V88_Cf Ribosome; Translation, ribosome, 40S, 60S, 80S; HET: OHX, ZN, MG; 3.0A {Saccharomyces cerevisiae}, error: None, warning: 4v88_Cf (sum_probs: 65.5, rank: 42): feature extracting errors: Template all atom mask was all zeros: 4v88_Cf. Residue range: 0-75, mmCIF parsing errors: {}
+I1108 10:58:09.913150 22690355414208 templates.py:267] Found an exact template match 5l9u_S.
+I1108 10:58:11.779101 22690355414208 templates.py:267] Found an exact template match 4zyn_B.
+I1108 10:58:11.901462 22690355414208 templates.py:267] Found an exact template match 1wyw_B.
+I1108 10:58:12.404389 22690355414208 templates.py:267] Found an exact template match 2mw5_A.
+I1108 10:58:12.846451 22690355414208 templates.py:267] Found an exact template match 5c23_B.
+I1108 10:58:12.975996 22690355414208 templates.py:267] Found an exact template match 3pge_A.
+I1108 10:58:13.430656 22690355414208 templates.py:267] Found an exact template match 5c1z_A.
+I1108 10:58:13.912405 22690355414208 templates.py:267] Found an exact template match 5gjl_A.
+I1108 10:58:15.080988 22690355414208 templates.py:267] Found an exact template match 2kqs_A.
+I1108 10:58:15.207813 22690355414208 templates.py:267] Found an exact template match 4bkg_A.
+I1108 10:58:16.191586 22690355414208 templates.py:267] Found an exact template match 2k8h_A.
+I1108 10:58:16.304359 22690355414208 templates.py:267] Found an exact template match 2d07_B.
+I1108 10:58:16.363198 22690355414208 pipeline.py:234] Uniref90 MSA size: 10000 sequences.
+I1108 10:58:16.363302 22690355414208 pipeline.py:235] BFD MSA size: 1032 sequences.
+I1108 10:58:16.363342 22690355414208 pipeline.py:236] MGnify MSA size: 501 sequences.
+I1108 10:58:16.363376 22690355414208 pipeline.py:237] Final (deduplicated) MSA size: 3242 sequences.
+I1108 10:58:16.363521 22690355414208 pipeline.py:239] Total number of templates (NB: this can include bad templates and is later filtered to top 4): 20.
+I1108 10:58:16.373741 22690355414208 run_alphafold.py:190] Running model model_1_pred_0 on rcsb_pdb_1UBQ
+I1108 10:58:18.982839 22690355414208 model.py:165] Running predict with shape(feat) = {'aatype': (4, 76), 'residue_index': (4, 76), 'seq_length': (4,), 'template_aatype': (4, 4, 76), 'template_all_atom_masks': (4, 4, 76, 37), 'template_all_atom_positions': (4, 4, 76, 37, 3), 'template_sum_probs': (4, 4, 1), 'is_distillation': (4,), 'seq_mask': (4, 76), 'msa_mask': (4, 508, 76), 'msa_row_mask': (4, 508), 'random_crop_to_size_seed': (4, 2), 'template_mask': (4, 4), 'template_pseudo_beta': (4, 4, 76, 3), 'template_pseudo_beta_mask': (4, 4, 76), 'atom14_atom_exists': (4, 76, 14), 'residx_atom14_to_atom37': (4, 76, 14), 'residx_atom37_to_atom14': (4, 76, 37), 'atom37_atom_exists': (4, 76, 37), 'extra_msa': (4, 5120, 76), 'extra_msa_mask': (4, 5120, 76), 'extra_msa_row_mask': (4, 5120), 'bert_mask': (4, 508, 76), 'true_msa': (4, 508, 76), 'extra_has_deletion': (4, 5120, 76), 'extra_deletion_value': (4, 5120, 76), 'msa_feat': (4, 508, 76, 49), 'target_feat': (4, 76, 22)}

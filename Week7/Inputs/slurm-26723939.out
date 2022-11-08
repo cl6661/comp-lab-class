@@ -1,0 +1,35 @@
+I1106 13:17:17.645361 22871673752448 run-alphafold-2.2.0.py:116] Mounting /home/cl6661/scratch/comp-lab-class/Week7/Inputs -> /tmp/cl6661/559265a2a5244cb4b9c54f853e8d6810/fasta_path_0
+Command to run: MY_ALPHAFOLD_BINDS="--bind /home/cl6661/scratch/comp-lab-class/Week7/Inputs:/tmp/cl6661/559265a2a5244cb4b9c54f853e8d6810/fasta_path_0:ro" /bin/bash /scratch/work/public/apps/alphafold/2.2.0/run-alphafold-2.2.0.bash python -u /opt/alphafold/run_alphafold.py --fasta_paths=/tmp/cl6661/559265a2a5244cb4b9c54f853e8d6810/fasta_path_0/rcsb_pdb_1UBQ.fasta --uniref90_database_path=/alphafold-data/uniref90/uniref90.fasta --mgnify_database_path=/alphafold-data/mgnify/mgy_clusters_2018_12.fa --data_dir=/alphafold-data --template_mmcif_dir=/alphafold-data/pdb_mmcif/mmcif_files --obsolete_pdbs_path=/alphafold-data/pdb_mmcif/obsolete.dat --pdb70_database_path=/alphafold-data/pdb70/pdb70 --uniclust30_database_path=/alphafold-data/uniclust30/uniclust30_2018_08/uniclust30_2018_08 --bfd_database_path=/alphafold-data/bfd/bfd_metaclust_clu_complete_id30_c90_final_seq.sorted_opt --output_dir=/home/cl6661/scratch/comp-lab-class/Week7/Inputs --max_template_date=2022-10-25 --db_preset=full_dbs --model_preset=monomer --benchmark=False --use_precomputed_msas=False --num_multimer_predictions_per_model=5 --run_relax=True --use_gpu_relax=True --logtostderr
+Traceback (most recent call last):
+  File "/share/apps/python/3.8.6/intel/lib/python3.8/site-packages/pandas/__init__.py", line 30, in <module>
+    from pandas._libs import hashtable as _hashtable, lib as _lib, tslib as _tslib
+  File "/share/apps/python/3.8.6/intel/lib/python3.8/site-packages/pandas/_libs/__init__.py", line 13, in <module>
+    from pandas._libs.interval import Interval
+ModuleNotFoundError: No module named 'pandas._libs.interval'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/alphafold/run_alphafold.py", line 32, in <module>
+    from alphafold.data import pipeline_multimer
+  File "/opt/alphafold/alphafold/data/pipeline_multimer.py", line 29, in <module>
+    from alphafold.data import feature_processing
+  File "/opt/alphafold/alphafold/data/feature_processing.py", line 20, in <module>
+    from alphafold.data import msa_pairing
+  File "/opt/alphafold/alphafold/data/msa_pairing.py", line 25, in <module>
+    import pandas as pd
+  File "/share/apps/python/3.8.6/intel/lib/python3.8/site-packages/pandas/__init__.py", line 34, in <module>
+    raise ImportError(
+ImportError: C extension: No module named 'pandas._libs.interval' not built. If you want to import pandas from the source directory, you may need to run 'python setup.py build_ext --inplace --force' to build the C extensions first.
+Traceback (most recent call last):
+  File "/scratch/work/public/apps/alphafold/2.2.0/run-alphafold-2.2.0.py", line 298, in <module>
+    app.run(main)
+  File "/share/apps/python/3.8.6/intel/lib/python3.8/site-packages/absl/app.py", line 312, in run
+    _run_main(main, args)
+  File "/share/apps/python/3.8.6/intel/lib/python3.8/site-packages/absl/app.py", line 258, in _run_main
+    sys.exit(main(argv))
+  File "/scratch/work/public/apps/alphafold/2.2.0/run-alphafold-2.2.0.py", line 253, in main
+    subprocess.run(cmd, shell=True, check=True)
+  File "/share/apps/python/3.8.6/intel/lib/python3.8/subprocess.py", line 512, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command 'MY_ALPHAFOLD_BINDS="--bind /home/cl6661/scratch/comp-lab-class/Week7/Inputs:/tmp/cl6661/559265a2a5244cb4b9c54f853e8d6810/fasta_path_0:ro" /bin/bash /scratch/work/public/apps/alphafold/2.2.0/run-alphafold-2.2.0.bash python -u /opt/alphafold/run_alphafold.py --fasta_paths=/tmp/cl6661/559265a2a5244cb4b9c54f853e8d6810/fasta_path_0/rcsb_pdb_1UBQ.fasta --uniref90_database_path=/alphafold-data/uniref90/uniref90.fasta --mgnify_database_path=/alphafold-data/mgnify/mgy_clusters_2018_12.fa --data_dir=/alphafold-data --template_mmcif_dir=/alphafold-data/pdb_mmcif/mmcif_files --obsolete_pdbs_path=/alphafold-data/pdb_mmcif/obsolete.dat --pdb70_database_path=/alphafold-data/pdb70/pdb70 --uniclust30_database_path=/alphafold-data/uniclust30/uniclust30_2018_08/uniclust30_2018_08 --bfd_database_path=/alphafold-data/bfd/bfd_metaclust_clu_complete_id30_c90_final_seq.sorted_opt --output_dir=/home/cl6661/scratch/comp-lab-class/Week7/Inputs --max_template_date=2022-10-25 --db_preset=full_dbs --model_preset=monomer --benchmark=False --use_precomputed_msas=False --num_multimer_predictions_per_model=5 --run_relax=True --use_gpu_relax=True --logtostderr' returned non-zero exit status 1.
