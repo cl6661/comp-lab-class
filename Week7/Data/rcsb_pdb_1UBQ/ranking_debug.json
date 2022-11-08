@@ -1,16 +1,16 @@
 {
     "plddts": {
-        "model_1_pred_0": 94.9433969468235,
-        "model_2_pred_0": 95.17835798783035,
-        "model_3_pred_0": 94.5770398026365,
-        "model_4_pred_0": 95.40508178222241,
-        "model_5_pred_0": 94.71146938234419
+        "model_1_pred_0": 94.84078401007764,
+        "model_2_pred_0": 95.21858227149815,
+        "model_3_pred_0": 94.74754357642863,
+        "model_4_pred_0": 95.4072696709621,
+        "model_5_pred_0": 94.27978590423197
     },
     "order": [
         "model_4_pred_0",
         "model_2_pred_0",
         "model_1_pred_0",
-        "model_5_pred_0",
-        "model_3_pred_0"
+        "model_3_pred_0",
+        "model_5_pred_0"
     ]
 }
