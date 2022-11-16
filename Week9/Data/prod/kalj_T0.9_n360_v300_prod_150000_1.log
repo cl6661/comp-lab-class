@@ -20,7 +20,7 @@ Reading restart file ...
   1 by 2 by 2 MPI processor grid
   restoring pair style lj/cut from restart
   360 atoms
-  read_restart CPU = 0.002 seconds
+  read_restart CPU = 0.010 seconds
 include ${pot}_particles.lmp
 include kalj_particles.lmp
 mass * 1.0 #  set mass 1.0 for all types
@@ -97,20 +97,20 @@ Per MPI rank memory allocation (min/avg/max) = 3.137 | 3.138 | 3.138 Mbytes
      30000   0.85233117    -6.1601948      0             -4.8852494      8.7341485    
      35000   0.90668493    -6.2008862      0             -4.8446366      8.6179148    
      37500   0.88378423    -6.1882981      0             -4.8663042      8.6235909    
-Loop time of 3.14425 on 4 procs for 37500 steps with 360 atoms
+Loop time of 3.11175 on 4 procs for 37500 steps with 360 atoms
 
-Performance: 2060907.876 tau/day, 11926.550 timesteps/s, 4.294 Matom-step/s
+Performance: 2082431.423 tau/day, 12051.108 timesteps/s, 4.338 Matom-step/s
 99.6% CPU use with 4 MPI tasks x 1 OpenMP threads
 
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
 ---------------------------------------------------------------
-Pair    | 1.8886     | 1.9432     | 1.9897     |   2.7 | 61.80
-Neigh   | 0.16088    | 0.16402    | 0.16593    |   0.5 |  5.22
-Comm    | 0.84828    | 0.89366    | 0.94814    |   3.9 | 28.42
-Output  | 0.012521   | 0.014838   | 0.019332   |   2.2 |  0.47
-Modify  | 0.089616   | 0.092694   | 0.096576   |   0.9 |  2.95
-Other   |            | 0.03585    |            |       |  1.14
+Pair    | 1.8942     | 1.9322     | 1.9562     |   1.9 | 62.09
+Neigh   | 0.16084    | 0.1638     | 0.16547    |   0.5 |  5.26
+Comm    | 0.84686    | 0.87205    | 0.91131    |   2.8 | 28.02
+Output  | 0.012367   | 0.014675   | 0.019218   |   2.2 |  0.47
+Modify  | 0.090715   | 0.092781   | 0.09489    |   0.7 |  2.98
+Other   |            | 0.03627    |            |       |  1.17
 
 Nlocal:             90 ave          93 max          88 min
 Histogram: 1 0 1 0 1 0 0 0 0 1

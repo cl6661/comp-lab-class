@@ -20,7 +20,7 @@ Reading restart file ...
   1 by 2 by 2 MPI processor grid
   restoring pair style lj/cut from restart
   360 atoms
-  read_restart CPU = 0.002 seconds
+  read_restart CPU = 0.022 seconds
 include ${pot}_particles.lmp
 include kalj_particles.lmp
 mass * 1.0 #  set mass 1.0 for all types
@@ -92,20 +92,20 @@ Per MPI rank memory allocation (min/avg/max) = 3.138 | 3.138 | 3.138 Mbytes
       1000   1.4651922     -5.3235843      0             -3.1319009      14.56903     
       2000   1.6039063     -5.3174248      0             -2.9182484      14.790532    
       2500   1.5224545     -5.0933658      0             -2.8160277      16.068812    
-Loop time of 0.231059 on 4 procs for 2500 steps with 360 atoms
+Loop time of 0.231656 on 4 procs for 2500 steps with 360 atoms
 
-Performance: 1869651.458 tau/day, 10819.742 timesteps/s, 3.895 Matom-step/s
-99.1% CPU use with 4 MPI tasks x 1 OpenMP threads
+Performance: 1864832.984 tau/day, 10791.858 timesteps/s, 3.885 Matom-step/s
+99.0% CPU use with 4 MPI tasks x 1 OpenMP threads
 
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
 ---------------------------------------------------------------
-Pair    | 0.12983    | 0.13266    | 0.13766    |   0.8 | 57.42
-Neigh   | 0.014208   | 0.014559   | 0.015015   |   0.3 |  6.30
-Comm    | 0.058925   | 0.063396   | 0.066985   |   1.2 | 27.44
-Output  | 0.0086108  | 0.010613   | 0.01449    |   2.2 |  4.59
-Modify  | 0.0059871  | 0.0061697  | 0.006323   |   0.2 |  2.67
-Other   |            | 0.003658   |            |       |  1.58
+Pair    | 0.13027    | 0.1334     | 0.1397     |   1.0 | 57.58
+Neigh   | 0.014253   | 0.014521   | 0.015034   |   0.3 |  6.27
+Comm    | 0.057566   | 0.063316   | 0.067108   |   1.5 | 27.33
+Output  | 0.0084688  | 0.010482   | 0.014364   |   2.2 |  4.52
+Modify  | 0.0060635  | 0.0062481  | 0.0064638  |   0.2 |  2.70
+Other   |            | 0.003692   |            |       |  1.59
 
 Nlocal:             90 ave          93 max          84 min
 Histogram: 1 0 0 0 0 0 1 0 0 2
@@ -118,4 +118,4 @@ Total # of neighbors = 20764
 Ave neighs/atom = 57.677778
 Neighbor list builds = 85
 Dangerous builds = 0
-Total wall time: 0:00:01
+Total wall time: 0:00:00

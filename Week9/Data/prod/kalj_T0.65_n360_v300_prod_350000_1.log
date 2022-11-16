@@ -20,7 +20,7 @@ Reading restart file ...
   1 by 2 by 2 MPI processor grid
   restoring pair style lj/cut from restart
   360 atoms
-  read_restart CPU = 0.002 seconds
+  read_restart CPU = 0.010 seconds
 include ${pot}_particles.lmp
 include kalj_particles.lmp
 mass * 1.0 #  set mass 1.0 for all types
@@ -91,20 +91,20 @@ Per MPI rank memory allocation (min/avg/max) = 3.137 | 3.137 | 3.137 Mbytes
          0   0.6256403     -6.6264349      0             -5.6905813      5.6400966    
      70000   0.65815716    -6.5848903      0             -5.6003969      6.0100177    
      87500   0.69771734    -6.4781576      0             -5.4344888      6.5584037    
-Loop time of 7.48751 on 4 procs for 87500 steps with 360 atoms
+Loop time of 7.58166 on 4 procs for 87500 steps with 360 atoms
 
-Performance: 3029044.135 tau/day, 11686.127 timesteps/s, 4.207 Matom-step/s
-99.6% CPU use with 4 MPI tasks x 1 OpenMP threads
+Performance: 2991430.279 tau/day, 11541.012 timesteps/s, 4.155 Matom-step/s
+99.4% CPU use with 4 MPI tasks x 1 OpenMP threads
 
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
 ---------------------------------------------------------------
-Pair    | 4.5138     | 4.5786     | 4.6637     |   2.9 | 61.15
-Neigh   | 0.46596    | 0.46849    | 0.47146    |   0.4 |  6.26
-Comm    | 2.0382     | 2.1163     | 2.1777     |   3.9 | 28.26
-Output  | 0.023474   | 0.02653    | 0.03261    |   2.2 |  0.35
-Modify  | 0.21638    | 0.22354    | 0.23036    |   1.4 |  2.99
-Other   |            | 0.07398    |            |       |  0.99
+Pair    | 4.5112     | 4.6354     | 4.9013     |   7.3 | 61.14
+Neigh   | 0.46519    | 0.47066    | 0.48134    |   0.9 |  6.21
+Comm    | 1.8446     | 2.1198     | 2.2407     |  11.1 | 27.96
+Output  | 0.065227   | 0.070214   | 0.082488   |   2.7 |  0.93
+Modify  | 0.20222    | 0.21383    | 0.22479    |   1.7 |  2.82
+Other   |            | 0.07177    |            |       |  0.95
 
 Nlocal:             90 ave          96 max          87 min
 Histogram: 1 1 1 0 0 0 0 0 0 1
