@@ -1,0 +1,13 @@
+1. 3 separate figures showing g_11(r), g_22(r), g_12(r) - each one at all the temperatures
+2. Make a figure showing the MSD for type 1 particles at each temperature.
+3. Make a log-log plot of time(MSD=1) vs 1/T. 
+https://github.com/cerbveen/comp-lab-class
+1.Great
+2.Great
+3.Great
+https://github.com/yxnyu/comp-lab-class 
+1.Great
+2.Great
+3. The trend for time(MSD=1) vs 1/T is inversed.
+https://github.com/YutingWuTia/comp-lab-class
+Could not find the figures

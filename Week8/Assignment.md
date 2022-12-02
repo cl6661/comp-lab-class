@@ -10,7 +10,7 @@
 	- Go in to the melt directory and run the example by doing: `mpirun lmp -in in.melt`
 	- Uncomment the `dump ... atom ...` line and the `dump 3 ... lines` to produce a movie and a trajectory file
 	- Read the `dump.melt` file to make sure you understand what's in it.
-	- Since this file is what VMD calls `lammpstrj` format, open it with VMD using `vmd -lammpstrj dump.melt` or similar; change the display type to orthographic, the representation to VDW, and the particle size to 0.5. 
+	- Since this file is what VMD calls `lammpstrj` format, open it with VMD using `w` or similar; change the display type to orthographic, the representation to VDW, and the particle size to 0.5. 
 	- Watch the movie, and if it worked, Save the movie in your figures folder with an appropriate name
 	- Note that you can add `-log LOGFILE` after the command so the THERMO text in the screen goes to a log file, if you are writing a script. This could be helpful for analysis later
 	- Note that you can add `-var VAR` to set a variable name inside the script, which can be helpful for changing parameters from the outside

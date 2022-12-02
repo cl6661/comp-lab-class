@@ -1,0 +1,12 @@
+https://github.com/WeiJunZhou23/comp-lab-class
+Setup: movie is great
+Part 1: Movies are great. You can also include snapshots of density 0.7 and 0.9
+Part 2: I did not see the images for the non crystalline and crystalline states. From the video, i could see the crystalline state. You can use point representation.
+https://github.com/triashap5/comp-lab-class
+Setup: movie is great, can also include a movie exported from VMD
+Part 1: images are great
+Part 2: I couldn't see the png files. The tif files are great
+https://github.com/cerbveen/comp-lab-class
+Setup: movie is great, can also include a movie exported from VMD
+Part 1: Good to include both representation
+Part 2: It is difficult to tell the crystallinity at the viewing angle. With point representation, the particle should small enough to see periodic gaps.
