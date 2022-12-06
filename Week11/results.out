@@ -8,16 +8,16 @@ Quantum electrostatic potential (see 1_default_grid_esp.dat)
 Constraints
     Charge constraints
         Total charge of   0.02205993 on the set   1
-        Total charge of  -0.29862761 on the set   2
-        Total charge of   0.31840767 on the set   3
-        Total charge of  -0.59334565 on the set   4
+        Total charge of  -0.29862762 on the set   2
+        Total charge of   0.31840766 on the set   3
+        Total charge of  -0.59334564 on the set   4
         Total charge of   0.36327536 on the set   5
         Total charge of  -0.32859510 on the set   6
-        Total charge of   0.13159715 on the set   7
+        Total charge of   0.13159716 on the set   7
         Total charge of   0.13786910 on the set   8
         Total charge of   0.05887969 on the set   9
         Total charge of   0.04381497 on the set  10
-        Total charge of   0.14466448 on the set  11
+        Total charge of   0.14466449 on the set  11
 
 Restraint
     Hyperbolic restraint to a charge of zero
@@ -30,14 +30,14 @@ Fit
 Electrostatic Potential Charges
    Center  Symbol       ESP      RESP
       1    C       0.02205993  0.02205993
-      2    C      -0.29862761 -0.29862761
-      3    C       0.31840767  0.31840767
-      4    N      -0.59334565 -0.59334565
+      2    C      -0.29862762 -0.29862762
+      3    C       0.31840766  0.31840766
+      4    N      -0.59334564 -0.59334564
       5    C       0.36327536  0.36327536
       6    C      -0.32859510 -0.32859510
-      7    H       0.13159715  0.13159715
+      7    H       0.13159716  0.13159716
       8    H       0.13786910  0.13786910
       9    H       0.05887969  0.05887969
      10    H       0.04381497  0.04381497
-     11    H       0.14466448  0.14466448
-Total Charge:     -0.00000000 -0.00000000
+     11    H       0.14466449  0.14466449
+Total Charge:      0.00000000  0.00000000
